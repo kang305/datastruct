@@ -1,0 +1,6 @@
+add_executable(01_BinaryTreeTrave 01_BinaryTreeTrave/main.c 01_BinaryTreeTrave/binaryTree.c 01_BinaryTreeTrave/binaryTree.h)
+add_executable(02_ThreadedBTree 02_ThreadedBTree/main.c 02_ThreadedBTree/threadedBTree.c 02_ThreadedBTree/threadedBTree.h)
+add_executable(03_BinarySearchTree 03_BinarySearchTree/main.c 03_BinarySearchTree/BSTree.c 03_BinarySearchTree/BSTree.h )
+add_executable(04_AVLTree 04_AVLTree/main.c 04_AVLTree/AVLTree.c 04_AVLTree/AVLTree.h)
+add_executable(05_UnionFindSet 05_UnionFindSet/main.c 05_UnionFindSet/quickFindSet.c 05_UnionFindSet/quickFindSet.h 05_UnionFindSet/quickUnionSet.c 05_UnionFindSet/quickUnionSet.h 05_UnionFindSet/common.h)
+add_executable(06_HuffmanTree 06_HuffmanTree/main.c 06_HuffmanTree/HuffmanTree.c 06_HuffmanTree/HuffmanTree.h)

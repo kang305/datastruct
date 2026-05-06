@@ -1,0 +1,1 @@
+add_executable(kmp kmp.c findStr.c findStr.h)
