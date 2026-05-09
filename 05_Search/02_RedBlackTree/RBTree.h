@@ -23,7 +23,7 @@ void releaseRBTree(RBTree *tree);
 //向红黑树插入元素
 void insertRBTree(RBTree *tree, KeyType key);
 // 红黑树的删除元素
-void deleterRBTree(RBTree *tree, KeyType key);
+void deleteRBTree(RBTree *tree, KeyType key);
 //打印元素
 void printRBTree(const RBNode *node, int key, int dir);
 // 查找元素

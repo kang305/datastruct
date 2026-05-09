@@ -10,6 +10,8 @@ int main() {
     if (rbTree->root) {
         printRBTree(rbTree->root, rbTree->root->key, 0);
     }
-
+    printf("\n");
+    deleteRBTree(rbTree, 63);
+    printRBTree(rbTree->root, rbTree->root->key, 0);
     return 0;
 }
