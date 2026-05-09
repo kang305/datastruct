@@ -192,3 +192,6 @@ void printRBTree(const RBNode *node, int key, int dir) {
         printRBTree(node->right, node->key, 1);
     }
 }
+void deleterRBTree(RBTree *tree, KeyType key) {
+
+}
