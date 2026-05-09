@@ -192,6 +192,59 @@ void printRBTree(const RBNode *node, int key, int dir) {
         printRBTree(node->right, node->key, 1);
     }
 }
+
+RBNode *searchRBNode(const RBTree *tree, KeyType key) {
+    RBNode *node=tree->root;
+    while(node) {
+        if (key<node->key) {
+            node=node->left;
+        }else if (key>node->key) {
+            node=node->right;
+        }else {
+            return node;
+        }
+    }
+
+    return NULL;
+}
+/*从红黑树中删除一个节点*/
+static void deleteRBNode(RBTree* tree, RBNode *node) {
+    RBNode *y;//真正要删除的节点地址
+    RBNode *x;//替换节点
+
+    if (node->left==NULL||node->right==NULL) {//有一个孩子或者没有孩子
+        y=node;
+    }else { //有左右子树，寻找后继节点(删除节点右子树的最左边)
+        y=node->right;
+        while (y->left!=NULL) {//退出循环当前的y就是要删除的节点
+            y=y->left;
+        }
+    }
+    //真正删除的节点找到了，开始寻找替换节点
+    if (y->left!=NULL) {
+        x=y->left;
+    }else {
+        x=y->right;
+    }
+    //开始更新替换节点和y点父节点的关系
+
+}
+
 void deleterRBTree(RBTree *tree, KeyType key) {
 
+}
+
+RBNode *searchRBNode(const RBTree *tree, KeyType key) {
+    RBNode *node=tree->root;
+    while(node) {
+        if (key<node->key) {
+            node=node->left;
+        }else if (key>node->key) {
+            node=node->right;
+        }else {
+            return node;
+        }
+    }
+
+    return NULL;
 }
