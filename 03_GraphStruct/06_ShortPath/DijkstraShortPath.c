@@ -15,7 +15,7 @@ void DijkstraMGraph(const MGraph *graph, int start, int dist[], int path[]) {
         }
     }
     //起点到自身的距离为0，起点没有前驱节点（设为-1），标记起点为已访问
-    path[start]=-1;
+    path[start]=-1;//起点设置为-1，方便找路径的时候找到起点
     mark[start]=1;
     dist[start]=0;
 

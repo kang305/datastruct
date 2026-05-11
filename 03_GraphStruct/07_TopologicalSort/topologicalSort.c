@@ -37,7 +37,8 @@ int TopologicalSortAGraph(const AGraph *graph) {//邻接表
    //3.从缓存区中取出一个事件,处理这个节点,这个节点的出度对应的入度节点同时减少
    int count=0;//记录已处理的顶点数
    while (top!=-1) {//栈不为空
-      int index = stack[top--];//出栈
+      int index = stack[top];//出栈
+      top--;
       count++;
       visitAGraphNode(&graph->nodes[index]);
       //在index索引节点的出度节点更新入度表

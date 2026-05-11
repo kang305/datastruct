@@ -215,6 +215,8 @@ static AVLNode *deleteAVLNode(AVLTree *tree, AVLNode *node,element_t e) {
             tree->count--;
             free(tmp);
         }
+
+
         else {
             //度为2,找前驱节点,更新当前度为2的点的值,删除这个前驱节点
             tmp=node->left;//前驱在当前节点的左子树,让tmp进入左子树

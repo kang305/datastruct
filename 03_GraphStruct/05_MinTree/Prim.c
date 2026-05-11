@@ -46,7 +46,7 @@ int PrimMGraph(const MGraph *graph, int startV, EdgeSet *result) {
         sum+=mini;                     //累加总权值(startV作为起始顶点，没有被任何"边"引入最小生成树，所以没有对应的边权值需要累加。)
         //3.每激活一个顶点后,更新cost数组,以index为行下标,获取他到其他顶点的权值,更新cost数组
         for (int j=0;j<graph->nodeNum;j++) {
-            if (mark[j]==0&&graph->edges[index][j]<cost[j]) {//(会更新到已经标记的顶点,但他们中间的cost已经是当前最小,因此不会根据graph->edges[index][j]更新)
+            if (mark[j]==0&&graph->edges[index][j]<cost[j]) {//(会遍历到已经标记的顶点,但他们中间的cost已经是当前最小,因此不会根据graph->edges[index][j]更新)
                 cost[j]=graph->edges[index][j];  // 更新最小权值
                 visit[j]=index;                  // 记录j是从index连接过来的
             }

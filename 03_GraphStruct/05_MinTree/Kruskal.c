@@ -71,7 +71,7 @@ void sortEdgeSet_better(EdgeSet *edge, int num) {
 
 //找a顶点的根节点
 static int getRoot(const int *uSet, int a) {//(边集数组地址,目标顶点编号)
-   while (a != uSet[a]) { //根节点的特征是：uSet[a] == a（自己是自己的父节点）
+   while (a != uSet[a]) { //根节点的特征是：uSet[a]==a（自己是自己的父节点）
       a=uSet[a];//向上找a顶点的根节点
    }
    return a;

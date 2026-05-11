@@ -3,9 +3,9 @@
 /*十字链表:有向图计算入度和出度*/
 //十字链表的弧结构
 typedef struct arcBox{
-    int tailVertex;    // 弧尾编号（边的起始顶点）
+    int tailVertex;    // 弧尾编号（边的起始顶点,出度）
     struct arcBox* tailNext;//连接同一个起点的下一条弧（出度链表）
-    int headVertex;    // 弧头编号（边的终止顶点）
+    int headVertex;    // 弧头编号（边的终止顶点,入度）
     struct arcBox* headNext;//连接同一个终点的下一条弧（入度链表）
     int weight;       //弧的权值
 }ArcBox;
