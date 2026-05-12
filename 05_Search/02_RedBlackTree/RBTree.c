@@ -208,7 +208,7 @@ RBNode *searchRBNode(const RBTree *tree, KeyType key) {
             return node;
         }
     }
-    return NULL;                //未找到，返回 NULL
+    return NULL; //未找到，返回 NULL
 }
 
 
@@ -287,7 +287,7 @@ static void deleteFixUp(RBTree *tree, RBNode *x, RBNode *parent) {
 }
 
 // =================== 删除节点内部函数 ===================
-/* 从红黑树中删除指定节点 node */
+/* 从红黑树中删除指定节点node */
 static void deleteRBNode(RBTree* tree, RBNode *node) {
     RBNode *y; // 真正要删除的节点
     RBNode *x; // y的孩子节点，用于替换y的位置
@@ -321,8 +321,6 @@ static void deleteRBNode(RBTree* tree, RBNode *node) {
     } else {                     //y是父的右孩子
         y->parent->right = x;
     }
-
-
     // 4. 如果y是后继节点,右子树最左（即不是要删除的原始 node），将y的键值复制给 node
     if (y!=node) {
         node->key = y->key;      //将node变为y,删除原位置的y
